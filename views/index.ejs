@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Home</title>
+</head>
+<body>
+    <div class="taskbar">
+        <a class="create button" href="/create"><button>Create New</button></a>
+    </div>
+
+    <div class="container">
+        <div class="all-blogs">
+            <% if(allBlogs.length > 0) { %>
+                <% allBlogs.forEach(blog => { %>
+                    <a class="links" href="/post/<%= blog.id %>">
+                        <h3 class="title"><%= blog.title %></h3>
+                        <p class="body"><%= blog.body %> </p>
+                    </a>
+               <% }) %>
+            <% }  else { %>
+                <p>There are no blogs to display</p>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>
