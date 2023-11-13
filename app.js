@@ -49,7 +49,24 @@ app.get('/post/:id', (req, res) => {
     })
 });
 
-//Post page router
+//Go to create page
+app.get('/create', (req,res) => {
+    res.render('create')
+});
+
+//Create page router
+app.post('/create', (req,res) => {
+    const post = new blog(req.body);
+    console.log(post)
+
+    post.save()
+    .then((result) => {
+        res.redirect('/')
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+})
 
 //Delete
 app.delete('/delete', (req,res) => {
@@ -64,7 +81,6 @@ app.delete('/delete', (req,res) => {
 })
 
 //404 message error router
-
 app.use((req,res) => {
     res.status(404).render('404');
 })

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/styles.css">
+    <title>Post</title>
+</head>
+<body>
+    <div class="cardpost">
+        <form action="/create" method="POST">
+            <label for="title"></label>
+            <input type="text" name="title" id="title" required>
+            <label for="body"></label>
+            <textarea type="text" name="body" id="body" required></textarea>
+            <button id="submit">Create</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+ .container, .taskbar {
+    font-family: sans-serif;
+ }
+
+.taskbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container {
+    border: 1px solid;
+}
+
+.createNew {
+    border-radius: 5px;
+    height: 30px;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    border-style: solid;
+}
+
+.createNew:hover {
+    cursor: pointer;
+}
